@@ -1,10 +1,20 @@
 {
   "compilerOptions": {
+    "baseUrl": "./", //for absolute import
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ], //for absolute import
+      "@shared/*": [
+        "shared/*"
+      ] //for absolute import
+    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
