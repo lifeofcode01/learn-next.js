@@ -28,6 +28,10 @@ const Links = [
     path: "/",
   },
   {
+    name: "My Todos",
+    path: "/todos/myTodos",
+  },
+  {
     name: "Projects",
     path: "/page2",
   },
