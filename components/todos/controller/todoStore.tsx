@@ -1,4 +1,5 @@
 import { configure, makeAutoObservable } from "mobx";
+import { createContext } from "react";
 
 configure({
   enforceActions: "never",
@@ -45,7 +46,7 @@ class Store {
     this.todos = removeTodo(this.todos, id);
   }
 
-  onLoad = () => {
+  onTodosFromApi = () => {
     fetch(
       "https://raw.githubusercontent.com/jherr/todos-four-ways/master/data/todos.json"
     )
@@ -55,8 +56,10 @@ class Store {
   };
 }
 
-const store = new Store();
-export default store;
+export const todoStoreContext = createContext<Partial<Store>>({});
+
+const todoStore = new Store();
+export default todoStore;
 
 // import { configure, makeAutoObservable } from "mobx";
 // import { ITodoModel, TodoModel } from "../model/TodoModel";
