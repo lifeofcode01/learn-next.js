@@ -53,6 +53,8 @@ class Store {
       .then((resp) => resp.json())
       // .then((data) => store.todos.push(data));
       .then((data) => (this.todos = data));
+
+    this.myTodo = this.resetTodoData();
   };
 }
 

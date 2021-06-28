@@ -8,7 +8,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-export default function SplitScreen() {
+export default function HomePage() {
   return (
     <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
@@ -16,7 +16,7 @@ export default function SplitScreen() {
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
             <Text
               as={"span"}
-              position={"relative"}
+              // position={"relative"}
               _after={{
                 content: "''",
                 width: "full",
@@ -35,6 +35,14 @@ export default function SplitScreen() {
               Design Projects
             </Text>{" "}
           </Heading>
+          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+            The project board is an exclusive resource for contract work. It is
+            perfect for freelancers, agencies, and moonlighters.
+          </Text>
+          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+            The project board is an exclusive resource for contract work. It is
+            perfect for freelancers, agencies, and moonlighters.
+          </Text>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
             The project board is an exclusive resource for contract work. It is
             perfect for freelancers, agencies, and moonlighters.

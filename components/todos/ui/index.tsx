@@ -11,6 +11,7 @@ import TodoList from "./TodoList";
 
 const TodoIndex = ({ myTodos }: { myTodos: ITodoModel[] }) => {
   todoStore.todos = myTodos;
+  todoStore.myTodo = todoStore.resetTodoData();
   return (
     <Box maxWidth="8xl" margin="auto" p={5}>
       <TodoList />

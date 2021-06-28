@@ -64,7 +64,7 @@ function ProductAddToCart() {
         borderWidth="1px"
         rounded="lg"
         shadow="lg"
-        position="relative"
+        // position="relative"
       >
         {data.isNew && (
           <Circle

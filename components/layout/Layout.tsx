@@ -4,6 +4,7 @@
 import NavBar from "@components/layout/navBar/navbar";
 import { AppProps } from "next/app";
 import React, { ReactNode } from "react";
+import mobileNav from "./navBar/navbar.module.css";
 
 type LayoutProps = {
   children: ReactNode;
@@ -11,11 +12,11 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="content">
+    <>
       <NavBar />
       {children}
       {/* <Footer /> */}
-    </div>
+    </>
   );
 };
 

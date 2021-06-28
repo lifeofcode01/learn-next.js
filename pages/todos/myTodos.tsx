@@ -55,7 +55,7 @@ const MyTodos = ({ todos }: { todos: ITodoModel[] }) => {
 //   };
 // };
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps = async () => {
   console.log(`inside Todo getServerSideProps`);
   const res = await fetch(
     `https://raw.githubusercontent.com/jherr/todos-four-ways/master/data/todos.json`

@@ -6,6 +6,7 @@ import React from "react";
 import styles from "../shared/Home.module.css";
 // import { Page1 } from "./page1";
 import HomeIndex from "@components/home/index";
+import NavBar from "@components/layout/navBar/navbar";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        {/* <NavBar /> */}
         <HomeIndex />
         {/* <Link href="/page1" passHref>
           <Button>Go to page 1</Button>

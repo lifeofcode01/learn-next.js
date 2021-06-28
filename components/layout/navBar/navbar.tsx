@@ -20,6 +20,7 @@ import HomePage from "@components/home/HomePage";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
+import { ColorModeSwitcher } from "@shared/ColorModeSwitcher";
 
 // const Links = ["Dashboard", "Projects", "Team"];
 const Links = [
@@ -71,7 +72,7 @@ export default function NavBar() {
   // const { pathname } = useRouter();
   // console.log(`pathname is : ${pathname}`);
   return (
-    <header className={styles.mobileNav}>
+    <div className={styles.mobileNav}>
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
@@ -95,6 +96,7 @@ export default function NavBar() {
               ))}
             </HStack>
           </HStack>
+          <ColorModeSwitcher />
           <Flex alignItems={"center"}>
             <Button
               variant={"solid"}
@@ -144,6 +146,6 @@ export default function NavBar() {
 
       {/* <Box p={4}>Main Content Here</Box> */}
       {/* <HomePage /> */}
-    </header>
+    </div>
   );
 }
