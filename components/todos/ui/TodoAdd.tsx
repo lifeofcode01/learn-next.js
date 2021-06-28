@@ -12,6 +12,7 @@ function TodoAdd() {
         onChange={(evt) => (todoStore.myTodo.text = evt.target.value)}
       />
       <Button
+        position="static"
         onClick={() => {
           if (todoStore.myTodo.text === "") {
             return alert("Hey! your Todo can't be empty!!");

@@ -13,21 +13,30 @@ import { ITodoModel } from "../controller/todoStore";
 
 function TodoListItems() {
   return (
-    <>
+    <div>
       {todoStore.todos.map((todo: ITodoModel) => (
         <Flex pt={2} key={todo.id}>
-          <Checkbox onClick={() => (todo.done = !todo.done)} />
+          <Checkbox
+            position="static"
+            onClick={() => (todo.done = !todo.done)}
+          />
 
           <Input
+            position="static"
             mx={2}
             value={todo.text + todo.id}
             onChange={(evt) => DOMRectReadOnly}
             // onChange={(evt) => (todo.text = evt.target.value)}
           />
-          <Button onClick={() => todoStore.deleteTodo2(todo.id)}>Delete</Button>
+          <Button
+            position="static"
+            onClick={() => todoStore.deleteTodo2(todo.id)}
+          >
+            Delete
+          </Button>
         </Flex>
       ))}
-    </>
+    </div>
   );
 }
 
@@ -39,7 +48,7 @@ function TodoList() {
       <Flex pt={2}>
         <Heading>Todo List</Heading>
         <Spacer />
-        <Button onClick={() => todoStore.onTodosFromApi()}>
+        <Button position="static" onClick={() => todoStore.onTodosFromApi()}>
           Load todo from api
         </Button>
       </Flex>

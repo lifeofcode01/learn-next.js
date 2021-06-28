@@ -16,12 +16,12 @@ export default function HomePage() {
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
             <Text
               as={"span"}
-              // position={"relative"}
+              position={"static"}
               _after={{
                 content: "''",
                 width: "full",
                 height: useBreakpointValue({ base: "20%", md: "30%" }),
-                position: "absolute",
+                // position: "absolute",
                 bottom: 1,
                 left: 0,
                 bg: "blue.400",
@@ -35,14 +35,6 @@ export default function HomePage() {
               Design Projects
             </Text>{" "}
           </Heading>
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
-            The project board is an exclusive resource for contract work. It is
-            perfect for freelancers, agencies, and moonlighters.
-          </Text>
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
-            The project board is an exclusive resource for contract work. It is
-            perfect for freelancers, agencies, and moonlighters.
-          </Text>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
             The project board is an exclusive resource for contract work. It is
             perfect for freelancers, agencies, and moonlighters.
