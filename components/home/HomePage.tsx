@@ -77,11 +77,12 @@ export default function HomePage() {
       <WrapItem>
         <Button
           rounded={"base"}
+          position="static"
           // bg={"grey.400"}
-          color={"white"}
-          _hover={{
-            bg: "blue.500",
-          }}
+          // color={"white"}
+          // _hover={{
+          //   bg: "blue.500",
+          // }}
         >
           {text}
         </Button>

@@ -6,24 +6,24 @@ import { observer } from "mobx-react-lite";
 
 function UserCard({ user }: { user: IUserModel }) {
   return (
-    <div>
-      <Flex
-        key={user.id}
-        bg={useColorModeValue("#F9FAFB", "gray.600")}
-        p={2}
-        w="full"
-        alignItems="center"
-        justifyContent="center"
+    // <div>
+    <Flex
+      // key={user.id}
+      bg={useColorModeValue("#F9FAFB", "gray.600")}
+      p={2}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Box
+        w="xs"
+        bg={useColorModeValue("white", "gray.800")}
+        shadow="lg"
+        rounded="lg"
+        overflow="hidden"
+        mx="auto"
       >
-        <Box
-          w="xs"
-          bg={useColorModeValue("white", "gray.800")}
-          shadow="lg"
-          rounded="lg"
-          overflow="hidden"
-          mx="auto"
-        >
-          {/* <Image
+        {/* <Image
           w="full"
           h={56}
           fit="cover"
@@ -31,8 +31,8 @@ function UserCard({ user }: { user: IUserModel }) {
           alt="avatar"
         /> */}
 
-          <Box py={5} textAlign="center">
-            {/* <Link
+        <Box py={5} textAlign="center">
+          {/* <Link
                 href="/users/user"
                 // display="block"
                 // fontSize="2xl"
@@ -41,18 +41,18 @@ function UserCard({ user }: { user: IUserModel }) {
               >
                 {user.id}
               </Link> */}
-            <chakra.span
-              fontSize="sm"
-              color={useColorModeValue("gray.700", "gray.200")}
-            >
-              <Link href={"/users/" + user.id} key={user.id} passHref>
-                {user.name}
-              </Link>
-            </chakra.span>
-          </Box>
+          <chakra.span
+            fontSize="sm"
+            color={useColorModeValue("gray.700", "gray.200")}
+          >
+            <Link href={"/users/" + user.id} key={user.id} passHref>
+              {user.name}
+            </Link>
+          </chakra.span>
         </Box>
-      </Flex>
-    </div>
+      </Box>
+    </Flex>
+    // </div>
   );
 }
 

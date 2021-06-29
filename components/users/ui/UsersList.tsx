@@ -4,7 +4,7 @@ import usersStore from "../controller/usersStore";
 import UserCard from "./UserListTile";
 const Userslist = () => {
   return (
-    <div>
+    <>
       {usersStore.users.map((user) => (
         // <Link href={"/users/users" + user.id} key={user.id} passHref>
         //   <a>
@@ -15,7 +15,7 @@ const Userslist = () => {
       ))}
 
       {/* <UserCard /> */}
-    </div>
+    </>
   );
 };
 
