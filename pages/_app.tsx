@@ -8,11 +8,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Layout>
-        <Component {...pageProps} />;
+        {/* <Component {...pageProps} />;  */}
+        {/* Beware of the semicolon at the end of Component in the above line */}
+        {/* Because of that semicolon all ui had semicolon at the end. */}
+
+        <Component {...pageProps} />
       </Layout>
-      {/* <Layout>
-        <Component {...pageProps} />;
-      </Layout> */}
     </ChakraProvider>
   );
 }

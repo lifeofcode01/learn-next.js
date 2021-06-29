@@ -19,7 +19,7 @@ import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import HomePage from "@components/home/HomePage";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { useRouter } from "next/dist/client/router";
+import { NextRouter, useRouter } from "next/dist/client/router";
 import { ColorModeSwitcher } from "@shared/ColorModeSwitcher";
 
 // const Links = ["Dashboard", "Projects", "Team"];
@@ -30,14 +30,14 @@ const Links = [
   },
   {
     name: "My Todos",
-    path: "/todos/myTodos",
+    path: "/todos",
   },
   {
-    name: "Projects",
-    path: "/page2",
+    name: "All Users",
+    path: "/users/",
   },
   {
-    name: "Dashboard",
+    name: "With MongoDB",
     path: "/page1",
   },
 ];
@@ -48,8 +48,10 @@ type NavLinkProp = {
 };
 
 const NavLink = ({ children, path }: NavLinkProp) => {
-  const { pathname } = useRouter();
-  console.log(`pathname is : ${pathname}`);
+  const router = useRouter();
+
+  const isActive = (route: NextRouter) => router.pathname === route;
+  console.log(`pathname is : ${router.pathname}`);
   return (
     <>
       <Box

@@ -6,7 +6,10 @@ import {
   Stack,
   Text,
   useBreakpointValue,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
+import React from "react";
 
 export default function HomePage() {
   return (
@@ -28,41 +31,61 @@ export default function HomePage() {
                 zIndex: -1,
               }}
             >
-              Freelance
+              {"Let's learn"}
             </Text>
             <br />{" "}
             <Text color={"blue.400"} as={"span"}>
-              Design Projects
+              Next.js
             </Text>{" "}
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
-            The project board is an exclusive resource for contract work. It is
-            perfect for freelancers, agencies, and moonlighters.
+            These are the Tech Stack we will learn along:
           </Text>
-          <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-            <Button
-              rounded={"full"}
-              bg={"blue.400"}
-              color={"white"}
-              _hover={{
-                bg: "blue.500",
-              }}
-            >
-              Create Project
-            </Button>
+          <Wrap>
+            {/* <Stack direction={{ base: "column", md: "row" }} spacing={4}> */}
+            {/* <Button rounded={"full"}>How It Works</Button> */}
+            {techStackButton("Next.js with Typescript")}
+            {techStackButton("Mobx for StateManagement")}
+            {techStackButton("Chakra Ui")}
+            {techStackButton("MongoDB")}
+            {/* <Button rounded={"full"}>Mobx State Management</Button> */}
+            {/* <Button rounded={"full"}>How It Works</Button>
             <Button rounded={"full"}>How It Works</Button>
-          </Stack>
+            <Button rounded={"full"}>How It Works</Button> */}
+            {/* </Stack> */}
+          </Wrap>
         </Stack>
       </Flex>
       <Flex flex={1}>
         <Image
           alt={"Login Image"}
-          objectFit={"cover"}
+          objectFit={"fill"}
+          // src={
+          //   "https://learnpracticeandshare.com/wp-content/uploads/2020/12/Awesome-Next-JavaScript-Resources-List.jpg"
+          // }
           src={
             "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
           }
+          fallbackSrc="https://via.placeholder.com/150"
         />
       </Flex>
     </Stack>
   );
+
+  function techStackButton(text: string) {
+    return (
+      <WrapItem>
+        <Button
+          rounded={"base"}
+          // bg={"grey.400"}
+          color={"white"}
+          _hover={{
+            bg: "blue.500",
+          }}
+        >
+          {text}
+        </Button>
+      </WrapItem>
+    );
+  }
 }
