@@ -48,10 +48,10 @@ type NavLinkProp = {
 };
 
 const NavLink = ({ children, path }: NavLinkProp) => {
-  const router = useRouter();
+  // const router = useRouter();
 
-  const isActive = (route: NextRouter) => router.pathname === route;
-  console.log(`pathname is : ${router.pathname}`);
+  // const isActive = (route: NextRouter) => router.pathname === route;
+  // console.log(`pathname is : ${router.pathname}`);
   return (
     <>
       <Box
