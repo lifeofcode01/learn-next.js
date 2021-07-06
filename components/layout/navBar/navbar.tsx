@@ -38,7 +38,7 @@ const Links = [
   },
   {
     name: "With MongoDB",
-    path: "/page1",
+    path: "/with-mongo-db",
   },
 ];
 
