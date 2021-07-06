@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "../shared/Home.module.css";
 // import { Page1 } from "./page1";
-import HomeIndex from "@components/home/index";
+import HomeIndexComp from "@components/home/index";
 import NavBar from "@components/layout/navBar/navbar";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
 
       <main>
         {/* <NavBar /> */}
-        <HomeIndex />
+        <HomeIndexComp />
         {/* <Link href="/page1" passHref>
           <Button>Go to page 1</Button>
         </Link>

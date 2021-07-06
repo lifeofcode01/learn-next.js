@@ -46,8 +46,8 @@ export default function HomePage() {
             {/* <Button rounded={"full"}>How It Works</Button> */}
             {techStackButton("Next.js with Typescript")}
             {techStackButton("Mobx for StateManagement")}
-            {techStackButton("Chakra Ui")}
-            {techStackButton("MongoDB")}
+            {techStackButton("Chakra UI for Making Beautiful UI easily")}
+            {techStackButton("MongoDB (soon)")}
             {/* <Button rounded={"full"}>Mobx State Management</Button> */}
             {/* <Button rounded={"full"}>How It Works</Button>
             <Button rounded={"full"}>How It Works</Button>
