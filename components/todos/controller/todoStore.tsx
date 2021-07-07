@@ -15,8 +15,8 @@ export interface ITodoModel {
 }
 
 class Store {
-  todos: ITodoModel[] = []; //list of todos and assign it to empty list.
   myTodo: ITodoModel = this.resetTodoData();
+  todos: ITodoModel[] = []; //list of todos and assign it to empty list.
 
   resetTodoData() {
     return {
